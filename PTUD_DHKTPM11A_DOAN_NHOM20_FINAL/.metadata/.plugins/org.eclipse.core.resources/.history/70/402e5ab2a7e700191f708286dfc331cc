@@ -1,0 +1,8 @@
+package entity;
+
+import javax.persistence.Entity;
+
+@Entity(name="SanPham")
+public class SanPham  implements Serializable{
+
+}

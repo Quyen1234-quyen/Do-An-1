@@ -1,0 +1,19 @@
+package test;
+
+import javax.persistence.EntityManager;
+
+import controller.XuLy_TaiKhoan;
+import dao.MyEntityManagerFactory;
+
+public class Test_TaiKhoan {
+	public static void main(String []agrs) {
+		EntityManager em=MyEntityManagerFactory.getInstance().getEntityManager();
+		XuLy_TaiKhoan xlTK= new XuLy_TaiKhoan();
+		
+		try {
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

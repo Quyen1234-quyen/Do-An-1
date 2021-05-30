@@ -1,0 +1,11 @@
+package controller;
+
+import dao.SanPhamDao;
+
+public class XuLy_SanPham {
+	SanPhamDao daoSP=new SanPhamDao();
+	//tim san pham theo ma
+	public SanPham timSanPhamTheoMa(int ma) {
+		return daoSP.timTheoMaSanPham(ma);
+	}
+}

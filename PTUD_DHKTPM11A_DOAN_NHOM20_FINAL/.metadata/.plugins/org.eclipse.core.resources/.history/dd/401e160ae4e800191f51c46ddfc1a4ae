@@ -1,0 +1,75 @@
+package test;
+
+import java.util.List;
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+
+import controller.XuLy_TaiKhoan;
+import dao.MyEntityManagerFactory;
+import entity.TaiKhoan;
+
+public class Test_TaiKhoan {
+	public static void main(String []agrs) {
+		EntityManager em=MyEntityManagerFactory.getInstance().getEntityManager();
+		XuLy_TaiKhoan xlTK= new XuLy_TaiKhoan();
+		
+		try {
+			
+			int chon;
+			Scanner sc=new Scanner(System.in);
+			System.out.println("1 :liet ke tat ca tai khoan");
+			System.out.println("2 :tim tai khoan theo ten");
+			System.out.println("3 :xoa tai khoan");
+			System.out.println("4 :sua mat khau tai khoan");
+			System.out.println("0 :thoat chuong trinh");
+			do {
+				chon=sc.nextInt();
+				switch(chon) {
+				case 1:
+					List<TaiKhoan> list=xlTK.getAllTaiKhoan();
+					System.out.println("tat ca tai khoan");
+					for(TaiKhoan tk:list) {
+						System.out.println(tk.toString());
+					}
+					break;
+				case 2:
+					System.out.println("nhap ten tai khoan can tim");
+					String ten=sc.nextLine();
+					TaiKhoan tk=xlTK.timTheoTen(ten);
+					if(tk!=null) {
+						System.out.println("tai khoan ton tai :");
+						System.out.println(tk.toString());
+					}else {
+						System.out.println("tai khoan khong ton tai");
+					}
+					break;
+				case 3:
+					System.out.println("nhap ten tai khoan can sua");
+					String tenTK =sc.nextLine();
+					TaiKhoan tk1=xlTK.timTheoTen(tenTK);
+					if(tk1!=null) {
+						System.out.println("tai khoan ton tai");
+					}else {
+						System.out.println("tai khoan khong ton tai");
+					}
+					
+					if(tk1!=null) {
+						if(xlTK.doiMatKhauTaiKhoan(tk1.getTenTaiKhoan(), tk1.getMatKhau())) {
+							System.out.println("sua thanh cong");
+						}else {
+							System.out.println("sua khong thanh cong");
+						}
+					}
+					break;
+				default: chon=0;
+					
+					
+				}
+			}while(chon!=0);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

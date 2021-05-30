@@ -1,0 +1,27 @@
+package test;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import controller.XuLy_TaiKhoan;
+import dao.MyEntityManagerFactory;
+import entity.TaiKhoan;
+
+public class Test_TaiKhoan {
+	public static void main(String []agrs) {
+		EntityManager em=MyEntityManagerFactory.getInstance().getEntityManager();
+		XuLy_TaiKhoan xlTK= new XuLy_TaiKhoan();
+		
+		try {
+			
+			System.out.println("get all tai khoan");
+			List<TaiKhoan> list=xlTK.getAllTaiKhoan();
+			for(TaiKhoan tk:list) {
+				System.out.println(tk.toString());
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

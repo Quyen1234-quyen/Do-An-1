@@ -1,0 +1,21 @@
+package controller;
+
+import entity.Admin;
+import entity.NhanVien;
+
+public class XuLy_DangKiTaiKhoan {
+	XuLy_TaiKhoan xlTK=new XuLy_TaiKhoan();
+	XuLy_NhanVien xlNV=new XuLy_NhanVien();
+	XuLy_Admin xlAD=new XuLy_Admin();
+	
+	public boolean dangKiTaiKhoanNhanVien(NhanVien nv) {
+		if(xlNV.timNhanVienTheoTen(nv.getTenNhanVien().getTenTaiKhoan())!=null) {
+			return false;
+		}else {
+			xlTK.themTaiKhoan(tk)
+		}
+	}
+	public boolean dangKiTaiKhoanAdmin(Admin ad) {
+		
+	}
+}

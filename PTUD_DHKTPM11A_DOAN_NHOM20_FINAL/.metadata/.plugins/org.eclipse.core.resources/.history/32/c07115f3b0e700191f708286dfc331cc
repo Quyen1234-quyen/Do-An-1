@@ -1,0 +1,7 @@
+use PTUD_DHKTPM11A_DOAN_NHOM20_FINAL
+
+insert into TAIKHOAN values('huy','12345','0')
+insert into TAIKHOAN values('quyen','12347','0')
+insert into TAIKHOAN values('loi','12337','0')
+
+

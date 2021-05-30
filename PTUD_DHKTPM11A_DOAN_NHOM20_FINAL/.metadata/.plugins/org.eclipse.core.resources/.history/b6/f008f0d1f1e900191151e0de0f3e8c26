@@ -1,0 +1,27 @@
+package test;
+
+import java.util.Scanner;
+
+import controller.XuLy_KhachHang;
+
+public class Test_KhachHang {
+	public static void main(String []args) {
+		XuLy_KhachHang xlKH=new XuLy_KhachHang();
+		try {
+			int chon;
+			Scanner sc=new Scanner(System.in);
+			do {
+				chon=sc.nextInt();
+				switch(chon) {
+					case 1:
+						break;
+					default :chon =0;
+				}
+				
+			}while(chon!=0);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package dao;
+
+import entity.Admin;
+
+public class AdminDao extends AbstractCRUD<Admin> {
+	public Admin timAdminTheoTen(String ten) {
+		return em.find(Admin.class,ten);
+	}
+}

@@ -1,0 +1,70 @@
+package entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name="SanPham")
+public class SanPham  implements Serializable{
+	private static final long serialVersionUID = 1L;
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY) 
+	@Column(name="maSanPham")
+	private int maSanPham;
+	@Column(name="tenSanPham")
+	private String tenSanPham;
+	@Column(name="giaSanPham")
+	private double giaSanPham;
+	@Column(name="xuatXuSanPham")
+	private String xuatXuSanPham;
+	@Column(name="tonKhoSanPham")
+	private String tonKhoSanPham;
+	public int getMaSanPham() {
+		return maSanPham;
+	}
+	public void setMaSanPham(int maSanPham) {
+		this.maSanPham = maSanPham;
+	}
+	public String getTenSanPham() {
+		return tenSanPham;
+	}
+	public void setTenSanPham(String tenSanPham) {
+		this.tenSanPham = tenSanPham;
+	}
+	public double getGiaSanPham() {
+		return giaSanPham;
+	}
+	public void setGiaSanPham(double giaSanPham) {
+		this.giaSanPham = giaSanPham;
+	}
+	public String getXuatXuSanPham() {
+		return xuatXuSanPham;
+	}
+	public void setXuatXuSanPham(String xuatXuSanPham) {
+		this.xuatXuSanPham = xuatXuSanPham;
+	}
+	public String getTonKhoSanPham() {
+		return tonKhoSanPham;
+	}
+	public void setTonKhoSanPham(String tonKhoSanPham) {
+		this.tonKhoSanPham = tonKhoSanPham;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	@Override
+	public String toString() {
+		return "SanPham [maSanPham=" + maSanPham + ", tenSanPham=" + tenSanPham + ", giaSanPham=" + giaSanPham
+				+ ", xuatXuSanPham=" + xuatXuSanPham + ", tonKhoSanPham=" + tonKhoSanPham + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+}

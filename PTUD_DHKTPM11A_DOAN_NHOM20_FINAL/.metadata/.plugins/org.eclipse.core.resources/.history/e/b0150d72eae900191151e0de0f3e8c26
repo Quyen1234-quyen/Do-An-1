@@ -1,0 +1,33 @@
+package dao;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import entity.KhachHang;
+
+public class KhachHangDao extends AbstractCRUD<KhachHang> {
+	// tim khach hang theo ma
+	public KhachHang timKhachHangTheoMa(int ma) {
+		return em.find(KhachHang.class,ma);
+	}
+	// tim khach hang theo cmnd
+	public List<KhachHang> timNhanVienTheoCMND(String cmnd){
+		try {
+			String sql="select kh from KhachHang kh where kh.cmndKH like :cmnd";
+			Query q=em.createQuery(sql,KhachHang.class);
+			q.setParameter("cmnd","%"+cmnd+"%" );
+			List<KhachHang>list=q.getResultList();
+			return list;
+		}catch(Exception e) {
+			return null;
+		}
+	}
+	// tim khach hang theo sdt
+	// tim khach hang theo ten
+	// tim khach hang theo gt
+	// danh sahc khach hang
+	// them khach hang
+	// xoa khach hang
+	// cap nhat khach hang
+}

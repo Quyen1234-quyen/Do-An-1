@@ -1,0 +1,45 @@
+package dao;
+
+import entity.Admin;
+import entity.NhanVien;
+
+public class NhanVienDao extends AbstractCRUD<Admin> {
+	public NhanVien timNhanVienTheoTen(String ten){
+		return em.find(NhanVien.class, ten);
+	}
+	public boolean themNhanVien(NhanVien nv){
+		try{
+			if(timNhanVienTheoTen(nv.getTenNhanVien().getTenTaiKhoan())==null)
+				em.persist(nv);
+			return true;
+		}catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	public boolean xoaNhanVienTheoTen(String ten){
+		try{ 
+			NhanVien nv=timNhanVienTheoTen(ten);
+			if(nv!=null)
+				em.remove(nv);
+			return true;
+				
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	public boolean xoaNhanVien(NhanVien nv){
+		try{
+			NhanVien nv1=timNhanVienTheoTen(nv.getTenNhanVien().getTenTaiKhoan());
+			if(nv1!=null)
+				em.remove(nv1);
+			return true;
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+}

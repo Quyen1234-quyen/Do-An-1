@@ -1,0 +1,31 @@
+package test;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+
+import controller.XuLy_NhanVien;
+import dao.MyEntityManagerFactory;
+
+public class Test_NhanVien {
+	public static void main(String []args) {
+		EntityManager em=MyEntityManagerFactory.getInstance().getEntityManager();
+		XuLy_NhanVien xlNV=new XuLy_NhanVien();
+		try {
+			int chon;
+			Scanner sc=new Scanner(System.in);
+			do {
+				chon=sc.nextInt();
+				switch(chon) {
+					case 1:
+						break;
+					default:chon =0;
+				}
+				
+			}while(chon!=0);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

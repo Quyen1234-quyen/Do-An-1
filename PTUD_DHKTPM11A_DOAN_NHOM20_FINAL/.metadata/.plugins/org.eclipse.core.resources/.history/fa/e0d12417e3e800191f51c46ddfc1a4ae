@@ -1,0 +1,43 @@
+package test;
+
+import java.util.List;
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+
+import controller.XuLy_TaiKhoan;
+import dao.MyEntityManagerFactory;
+import entity.TaiKhoan;
+
+public class Test_TaiKhoan {
+	public static void main(String []agrs) {
+		EntityManager em=MyEntityManagerFactory.getInstance().getEntityManager();
+		XuLy_TaiKhoan xlTK= new XuLy_TaiKhoan();
+		
+		try {
+			
+			int chon;
+			Scanner sc=new Scanner(System.in);
+			System.out.println("1 :liet ke tat ca tai khoan");
+			System.out.println("2 :tim tai khoan theo ten");
+			System.out.println("3 :xoa tai khoan");
+			System.out.println("0 :thoat chuong trinh");
+			do {
+				chon=sc.nextInt();
+				switch(chon) {
+				case 1:
+					List<TaiKhoan> list=xlTK.getAllTaiKhoan();
+					System.out.println("tat ca tai khoan");
+					for(TaiKhoan tk:list) {
+						System.out.println(tk.toString());
+					}
+					
+					
+				}
+			}while(chon!=0);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

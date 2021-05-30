@@ -1,0 +1,75 @@
+package dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Query;
+
+import entity.TaiKhoan;
+
+public class TaiKhoanDao extends AbstractCRUD<TaiKhoan> {
+	public TaiKhoan timTheoTenTaiKhoan(String ten){
+		return em.find(TaiKhoan.class, ten);
+	}
+	public boolean xoaTaiKhoanTheoTen(String ten){
+		try{
+			TaiKhoan tk=timTheoTenTaiKhoan(ten);
+			if(tk!=null)
+				remove(tk);
+			return true;
+			
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	public boolean xoaTaiKhoan(TaiKhoan tk){
+		try{
+			xoaTaiKhoanTheoTen(tk.getTenTaiKhoan());
+			return true;
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	public boolean doiMatKhau(String ten,String pass){
+		try{
+			TaiKhoan tk=timTheoTenTaiKhoan(ten);
+			System.out.println("tai khoan can doi :" +tk.toString());
+			if(tk!=null){
+				tk.setMatKhau(pass);
+				merge(tk);
+				return true;
+			}else{
+				return false;
+			}
+			
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	public boolean themTaiKhoan(TaiKhoan tk){
+		try{
+			
+			if(timTheoTenTaiKhoan(tk.getTenTaiKhoan())==null)
+				persist(tk);
+			return true;
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+	public List<TaiKhoan> getAllTaiKhoan(){
+		
+		List<TaiKhoan>list=new ArrayList<TaiKhoan>();
+		String sql ="select t from TaiKhoan t ";
+		Query q = em.createQuery(sql, TaiKhoan.class);
+		list = q.getResultList();
+		return  list;
+	}
+}

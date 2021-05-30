@@ -1,0 +1,40 @@
+package test;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+
+import controller.XuLy_NhanVien;
+import dao.MyEntityManagerFactory;
+
+public class Test_NhanVien {
+	public static void main(String []args) {
+		EntityManager em=MyEntityManagerFactory.getInstance().getEntityManager();
+		XuLy_NhanVien xlNV=new XuLy_NhanVien();
+		try {
+			int chon;
+			Scanner sc=new Scanner(System.in);
+			System.out.println("1 : danh sach nhan vien");
+			System.out.println("2 : tim nhan vien theo ten");
+			System.out.println("2 : tim nhan vien theo cmnd");
+			System.out.println("3 : tim nhan vien theo sdt");
+			System.out.println("4 : tim nhan vien theo gioi tinh");
+			System.out.println("5 : them nhan vien");
+			System.out.println("6 : xoa nhan vien");
+			System.out.println("7 : sua nhan vien");
+			System.out.println("0 : thoat chuong trinh");
+			do {
+				chon=sc.nextInt();
+				switch(chon) {
+					case 1:
+						break;
+					default:chon =0;
+				}
+				
+			}while(chon!=0);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

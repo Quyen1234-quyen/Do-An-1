@@ -1,0 +1,6 @@
+package entity;
+
+@Entity(name="Admin")
+public class Admin {
+	
+}

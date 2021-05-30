@@ -1,0 +1,69 @@
+package test;
+
+import java.util.Scanner;
+
+import controller.XuLy_KhachHang;
+import entity.KhachHang;
+
+public class Test_KhachHang {
+	public static void main(String []args) {
+		XuLy_KhachHang xlKH=new XuLy_KhachHang();
+		try {
+			int chon;
+			Scanner sc=new Scanner(System.in);
+			System.out.println("1 : them khach hang");
+			System.out.println("2 : danh sach khach hang");
+			System.out.println("3 : xoa khach hang");
+			System.out.println("4 : sua khach hang");
+			System.out.println("5 : tim ten");
+			System.out.println("6 : tim cmnd");
+			System.out.println("7 : tim sdt");
+			System.out.println("8 : tim gt");
+			System.out.println("0 : thoat chuong trinh");
+			do {
+				chon=sc.nextInt();
+				switch(chon) {
+					case 1:
+						sc.nextLine();
+						System.out.println("nhap thong tin khach hang");
+						System.out.println("ten nhan vien :");
+						String tenkh=sc.nextLine();
+						System.out.println("cmnd nhan vien :");
+						String cmndkh=sc.nextLine();
+						System.out.println("dia chi nhan vien :");
+						String dckh=sc.nextLine();
+						System.out.println("so dien thoai nhan vien :");
+						String sdtkh=sc.nextLine();
+						
+						KhachHang kh=new KhachHang(tenkh, cmndkh, cmndkh, sdtkh);
+						if(xlKH.themKhachHang(kh)) {
+							System.out.println("them thanh cong");
+						}else {
+							System.out.println("them khong thanh cong");
+						}
+						break;
+					case 2:
+						break;
+					case 3:
+						break;
+					case 4:
+						break;
+					case 5:
+						break;
+					case 6:
+						break;
+					case 7:
+						break;
+					case 8:
+						break;
+						
+					default :chon =0;
+				}
+				
+			}while(chon!=0);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

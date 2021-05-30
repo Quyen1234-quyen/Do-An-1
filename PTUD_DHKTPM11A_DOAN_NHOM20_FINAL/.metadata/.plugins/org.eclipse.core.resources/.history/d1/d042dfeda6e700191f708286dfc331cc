@@ -1,0 +1,49 @@
+package entity;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity(name="KhachHang")
+public class KhachHang implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="maKhachHang")
+	private int maKhachHang;
+	@Column(name="tenKH")
+	private String tenKH;
+	@Column(name="cmndKH")
+	private String cmndKH;
+	@Column(name="diaChi")
+	private String daiChi;
+	@Column(name="gioiTinh")
+	private String gioiTinh;
+	@Column(name="soDienThoai")
+	private String soDienThoai;
+	@Column(name="quocTich")
+	private String quocTich;
+	@OneToMany(mappedBy="khachHang")
+	private List<DonDatHang> DonDatHang;
+	
+	
+	
+	
+	
+	
+	
+
+}

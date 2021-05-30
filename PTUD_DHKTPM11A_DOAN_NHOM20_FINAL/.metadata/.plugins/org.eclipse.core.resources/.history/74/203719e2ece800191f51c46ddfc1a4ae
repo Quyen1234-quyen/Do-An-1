@@ -1,0 +1,23 @@
+package controller;
+
+import java.util.List;
+
+import dao.AdminDao;
+import entity.Admin;
+
+public class XuLy_Admin {
+	AdminDao daoAdmin=new AdminDao();
+	// tim admin theo ten
+	public Admin timAdminTheoTen(String ten) {
+		Admin ad=daoAdmin.timAdminTheoTen(ten);
+		if(ad!=null) {
+			return ad;
+		}else {
+			return null;
+		}
+	}
+	//tim admin theo so dien thoai
+	public List<Admin> timAdminTheoSDT(String sdt){
+		List<Admin> list= daoAdmin.timAdminTheoSoDienThoai(sdt);
+	}
+}

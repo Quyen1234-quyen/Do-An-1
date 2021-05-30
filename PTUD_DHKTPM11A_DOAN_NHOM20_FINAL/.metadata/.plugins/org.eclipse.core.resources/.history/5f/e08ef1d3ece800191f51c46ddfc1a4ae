@@ -1,0 +1,17 @@
+package controller;
+
+import dao.AdminDao;
+import entity.Admin;
+
+public class XuLy_Admin {
+	AdminDao daoAdmin=new AdminDao();
+	
+	public Admin timAdminTheoTen(String ten) {
+		Admin ad=daoAdmin.timAdminTheoTen(ten);
+		if(ad!=null) {
+			return ad;
+		}else {
+			return null;
+		}
+	}
+}

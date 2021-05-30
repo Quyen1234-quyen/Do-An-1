@@ -1,0 +1,19 @@
+package test;
+
+public class Test_SanPham {
+	public static void main(String []args) {
+		try {
+			int chon;
+			System.out.println("1 :danh sach san pham");
+			System.out.println("2 :tim san pham theo ma");
+			System.out.println("3 :tim san phan theo ten");
+			System.out.println("4 :them san pham");
+			System.out.println("5 :xoa san pham");
+			System.out.println("6 :sua san pham");
+			System.out.println("7 :danh sach san pham gan het");
+			System.out.println("8 :thoat chuong trinh");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

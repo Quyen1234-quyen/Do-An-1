@@ -1,0 +1,13 @@
+package controller;
+
+import dao.SanPhamDao;
+import entity.SanPham;
+
+public class XuLy_SanPham {
+	SanPhamDao daoSP=new SanPhamDao();
+	//tim san pham theo ma
+	public SanPham timSanPhamTheoMa(int ma) {
+		SanPham sp= daoSP.timTheoMaSanPham(ma);
+		return sp;
+	}
+}

@@ -1,0 +1,17 @@
+package controller;
+
+import java.util.List;
+
+import dao.TaiKhoanDao;
+import entity.TaiKhoan;
+
+public class XuLy_TaiKhoan {
+	TaiKhoanDao daoTK=new TaiKhoanDao();
+	public  List<TaiKhoan> timTheoTen(String ten){
+		try {
+			List<TaiKhoan> list=daoTK.timTheoTenTaiKhoan(ten);
+		}catch(Exception e) {
+			
+		}
+	}
+}

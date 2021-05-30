@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="dao.MyEntityManagerFactory"/>
+<fullyQualifiedTypeName name="entity.TaiKhoan"/>
+<fullyQualifiedTypeName name="dao.NhanVienDao"/>
+<fullyQualifiedTypeName name="dao.TaiKhoanDao"/>
+<fullyQualifiedTypeName name="dao.AdminDao"/>
+<fullyQualifiedTypeName name="entity.Admin"/>
+<fullyQualifiedTypeName name="controller.XuLy_Admin"/>
+<fullyQualifiedTypeName name="controller.XuLy_TaiKhoan"/>
+<fullyQualifiedTypeName name="controller.XuLy_DangNhap"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="controller.XuLy_NhanVien"/>
+<fullyQualifiedTypeName name="entity.NhanVien"/>
+<fullyQualifiedTypeName name="controller.XuLy_SanPham"/>
+<fullyQualifiedTypeName name="dao.SanPhamDao"/>
+<fullyQualifiedTypeName name="entity.SanPham"/>
+<fullyQualifiedTypeName name="dao.KhachHangDao"/>
+<fullyQualifiedTypeName name="javax.persistence.Query"/>
+<fullyQualifiedTypeName name="controller.XuLy_KhachHang"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="test.Test_KhachHang"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="entity.KhachHang"/>
+</qualifiedTypeNameHistroy>

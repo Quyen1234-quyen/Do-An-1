@@ -1,0 +1,7 @@
+package controller;
+
+import dao.NhanVienDao;
+
+public class XuLy_NhanVien {
+	NhanVienDao daoNV=new NhanVienDao();
+}

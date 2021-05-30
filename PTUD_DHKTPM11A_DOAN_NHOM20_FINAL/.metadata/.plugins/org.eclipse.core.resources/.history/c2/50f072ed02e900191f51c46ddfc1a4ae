@@ -1,0 +1,24 @@
+package controller;
+
+import java.util.List;
+
+import dao.SanPhamDao;
+import entity.SanPham;
+
+public class XuLy_SanPham {
+	SanPhamDao daoSP=new SanPhamDao();
+	//tim san pham theo ma
+	public SanPham timSanPhamTheoMa(int ma) {
+		SanPham sp= daoSP.timTheoMaSanPham(ma);
+		return sp;
+	}
+	//tim san pham theo ten
+	public List<SanPham> timSanPhamTheoTen(String ten){
+		List<SanPham> list=daoSP.timTheoTenSanPham(ten);
+		if(list.size()>0) {
+			return list;
+		}else {
+			return null;
+		}
+	}
+}

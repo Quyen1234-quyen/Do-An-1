@@ -1,0 +1,13 @@
+package entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+
+@Entity(name="ChiTietDonDatHang")
+public class ChiTietDonDatHang implements Serializable{
+	@Id
+	@ManyToOne()
+	@JoinColumn(name="maDonDatHang")
+	private DonDatHang DonDatHang
+}

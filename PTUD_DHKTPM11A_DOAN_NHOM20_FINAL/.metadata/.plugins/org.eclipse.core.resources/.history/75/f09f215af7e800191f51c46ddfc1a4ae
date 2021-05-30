@@ -1,0 +1,13 @@
+package test;
+
+import javax.persistence.EntityManager;
+
+import controller.XuLy_NhanVien;
+import dao.MyEntityManagerFactory;
+
+public class Test_NhanVien {
+	EntityManager em=MyEntityManagerFactory.getInstance().getEntityManager();
+	XuLy_NhanVien xlNV=new XuLy_NhanVien();
+	
+	
+}

@@ -1,0 +1,10 @@
+package dao;
+
+import entity.KhachHang;
+
+public class KhachHangDao extends AbstractCRUD<KhachHang> {
+	// tim khach hang theo ma
+	public KhachHang timKhachHangTheoMa(int ma) {
+		return em.find(KhachHang.class,ma);
+	}
+}

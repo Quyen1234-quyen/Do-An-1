@@ -1,0 +1,49 @@
+package controller;
+
+import java.util.List;
+
+import dao.TaiKhoanDao;
+import entity.TaiKhoan;
+
+public class XuLy_TaiKhoan {
+	TaiKhoanDao daoTK=new TaiKhoanDao();
+	
+	public TaiKhoan timTheoTen(String ten){
+		try {
+			TaiKhoan tk=daoTK.timTheoTenTaiKhoan(ten);
+			return tk;
+		}catch(Exception e) {
+			return null;
+		}
+	}
+	
+	public List<TaiKhoan> getAllTaiKhoan(){
+		try {
+			List<TaiKhoan> list=daoTK.getAllTaiKhoan();
+			return list;
+		}catch(Exception e) {
+			return null;
+		}
+	}
+	public boolean themTaiKhoan(TaiKhoan tk) {
+		try {
+			daoTK.themTaiKhoan(tk);
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
+	}
+	public boolean xoaTaiKhoanTheoTen(String ten) {
+		try {
+			TaiKhoan tk=daoTK.timTheoTenTaiKhoan(ten);
+			if(tk!=null) {
+				daoTK.remove(tk);
+				return true;
+			}else {
+				return false;
+			}
+		}catch(Exception e) {
+			return false;
+		}
+	}
+}

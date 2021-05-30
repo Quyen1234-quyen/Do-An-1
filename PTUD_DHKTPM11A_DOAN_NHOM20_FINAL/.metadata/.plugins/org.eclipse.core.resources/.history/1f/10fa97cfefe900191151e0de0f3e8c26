@@ -1,0 +1,59 @@
+package controller;
+
+import java.util.List;
+
+import dao.KhachHangDao;
+import entity.KhachHang;
+
+public class XuLy_KhachHang {
+	KhachHangDao daoKH=new KhachHangDao();
+	// tim khach hang theo ma
+	public KhachHang timKhachHangTheoMa(int ma) {
+		KhachHang kh=daoKH.timKhachHangTheoMa(ma);
+		if(kh!=null) {
+			return kh;
+		}else {
+			return null;
+		}
+	}
+	// tim khach hang theo cmnd
+	public List<KhachHang> timKhachHangTheoCMND(String cmnd){
+		List<KhachHang> list=daoKH.timKhachHangTheoCMND(cmnd);
+		if(list.size()>0) {
+			return list;
+		}else {
+			return null;
+		}
+	}
+	// tim khach hang theo sdt
+	public List<KhachHang> timKhachHangTheoSDT(String sdt){
+		List<KhachHang> list=daoKH.timKhachHangTheoSDT(sdt);
+		if(list.size()>0) {
+			return list;
+		}else {
+			return null;
+		}
+	}
+	// tim khach hang theo ten
+	public List<KhachHang> timKhachHangTheoTen(String ten){
+		List<KhachHang> list=daoKH.timKhachHangTheoTen(ten);
+		if(list.size()>0) {
+			return list;
+		}else {
+			return null;
+		}
+	}
+ 	// tim khach hang theo gt
+	public List<KhachHang> timKhachHangTheoGioiTinh(String gt){
+		List<KhachHang> list=daoKH.timKhachHangTheoGioiTinh(gt);
+		if(list.size()>0) {
+			return list;
+		}else {
+			return null;
+		}
+	}
+	// danh sahc khach hang
+	// them khach hang
+	// xoa khach hang
+	// cap nhat khach hang
+}

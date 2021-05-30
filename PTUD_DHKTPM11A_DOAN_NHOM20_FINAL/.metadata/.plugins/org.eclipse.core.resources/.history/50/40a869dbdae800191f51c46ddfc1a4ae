@@ -1,0 +1,20 @@
+use master
+create database PTUD_DHKTPM11A_DOAN_NHOM20_FINAL
+use PTUD_DHKTPM11A_DOAN_NHOM20_FINAL
+
+insert into TAIKHOAN values('huy','2','12345','0')
+insert into TAIKHOAN values('quyen','2','12347','0')
+insert into TAIKHOAN values('loi','2','12337','0')
+insert into TAIKHOAN values('Mia','1','12346','0')
+insert into TAIKHOAN values('Coc','1','12348','0')
+insert into ADMIN values('0122','huy')
+insert into ADMIN values('0124','quyen')
+insert into ADMIN values('0124','loi')
+insert into NHANVIEN values('112233','go vap','0','0133','Coc')
+insert into NHANVIEN values('112244','tan binh','1','0134','Mia')
+
+insert into SANPHAM values(1,290,'MayTinh',10,'Trung Quoc')
+insert into SANPHAM values(2,390,'Chuot',10,'Trung Quoc')
+insert into SANPHAM values(3,490,'Ban Phim',10,'Trung Quoc')
+insert into SANPHAM values(4,690,'Tai Nghe',10,'Trung Quoc')
+insert into SANPHAM values(5,890,'May Tinh Dell',10,'Viet Nam')

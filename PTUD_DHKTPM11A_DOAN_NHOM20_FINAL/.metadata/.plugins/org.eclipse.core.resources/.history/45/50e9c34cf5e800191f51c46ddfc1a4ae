@@ -1,0 +1,18 @@
+package controller;
+
+import dao.NhanVienDao;
+import entity.NhanVien;
+
+public class XuLy_NhanVien {
+	NhanVienDao daoNV=new NhanVienDao();
+	
+	//tim nhan vien theo ten
+	public NhanVien timNhanVienTheoTen(String ten) {
+		NhanVien nv=daoNV.timNhanVienTheoTen(ten);
+		if(nv!=null) {
+			return nv;
+		}else {
+			return null;
+		}
+	}
+}

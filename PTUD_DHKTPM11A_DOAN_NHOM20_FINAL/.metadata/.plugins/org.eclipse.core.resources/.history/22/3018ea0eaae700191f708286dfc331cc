@@ -1,0 +1,8 @@
+package entity;
+
+import java.io.Serializable;
+
+public class ChiTietDonDatHang_PK implements Serializable{
+	private int DonDatHang;
+	private int SanPham;
+}

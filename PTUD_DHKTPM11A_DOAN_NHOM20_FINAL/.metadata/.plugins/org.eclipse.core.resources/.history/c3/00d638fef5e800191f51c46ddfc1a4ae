@@ -1,0 +1,29 @@
+package controller;
+
+import java.util.List;
+
+import dao.NhanVienDao;
+import entity.NhanVien;
+
+public class XuLy_NhanVien {
+	NhanVienDao daoNV=new NhanVienDao();
+	
+	//tim nhan vien theo ten
+	public NhanVien timNhanVienTheoTen(String ten) {
+		NhanVien nv=daoNV.timNhanVienTheoTen(ten);
+		if(nv!=null) {
+			return nv;
+		}else {
+			return null;
+		}
+	}
+	//tim nhan vien theo sdt
+	public List<NhanVien> timNhanVienThoSDT(String sdt){
+		List<NhanVien> list=daoNV.timNhanVienTheoSoDienThoai(sdt);
+		if(list.size()>0) {
+			return list;
+		}else {
+			return null;
+		}
+	}
+}
